@@ -1,0 +1,29 @@
+<p>test works!</p>
+
+<!-- here value is the attribute defined by the html & id is the property defined by the dom -->
+<input [id] = 'myId' type="text" value="shree">
+
+<!-- this is the example of the build in pipes -->
+<p>{{name | uppercase}}</p>
+<p>{{name | titlecase}}</p>
+
+<!-- this is the example of build-in directive -->
+<!-- hide element at 2nd index -->
+<li *ngFor = "let item of list ; index as i">
+    <div *ngIf = "i==2;else elseBlock">{{''}}</div>
+    <ng-template #elseBlock> {{i}} : {{item}}</ng-template>
+</li>
+
+<!-- this is a custom directive -->
+<p appRedBlack>This paragraph is the custom directive one ! </p>
+
+<!-- this is the custom pipe -->
+<!-- pipe to convert from dollar to inr -->
+<p>{{30 | usdInr}}</p>
+
+<!-- pipe to reverse a string -->
+<p>{{"hello" | reverseString}}</p>
+
+<!-- this is the use of ngModule directive for two way binding -->
+<input [(ngModel)] ="twoWayBind" type="text">
+{{twoWayBind}}

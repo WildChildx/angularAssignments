@@ -1,0 +1,6 @@
+All the logic is written in components
+the component is the typescript file.
+the variables and functions are passed from component to the html.
+
+Html files acts as template for these variables.
+The variables are rendered.
